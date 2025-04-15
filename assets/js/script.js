@@ -1,8 +1,11 @@
 // Ejercicio 3
 
-function pintar(element, color = "green") {
+function pintar(event, color = "green") {
+    const element = event.target;
     element.style.backgroundColor = color;
 }
 
 const ele = document.getElementById("ele1");
-ele.addEventListener("click", () => pintar(ele, "yellow"))
+ele.addEventListener("click", function(event) {
+  pintar(event, 'yellow');
+});
